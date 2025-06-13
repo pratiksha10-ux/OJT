@@ -60,6 +60,7 @@
   background-color: rgba(0, 0, 0, 0.6); /* dark transparent overlay for text readability */
   padding: 20px 40px;
   border-radius: 10px;
+  width:100%;
 }
 
 h1 {

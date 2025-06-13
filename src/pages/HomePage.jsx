@@ -51,7 +51,8 @@ const HomePage = () => {
           height: "70vh",
           overflowY: "auto",
         }}>
-        <div className="overlay" style={{ backgroundColor: 'rgba(0,0,0,0.5)', padding: '20px'}}>
+        <div className="overlay" style={{ backgroundColor:'white', padding: '20px'}}>
+    <img src="\Images\name.jpg"></img>
           <h1>Welcome to Vivekanand College!</h1>
           <p>Your journey to excellence starts here.</p>
           <button className="apply-btn">Apply Now!</button>
