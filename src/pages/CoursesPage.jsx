@@ -3,7 +3,15 @@ import { Link } from 'react-router-dom';
 
 const CoursesPage = () => {
   return (
-    <div style={{ backgroundColor: "#52c7ca", minHeight: "90vh", padding: "2rem" }}>
+    <div style={{ 
+      backgroundColor: "#52c7ca",
+        minHeight: "100vh",           // 🟢 Full viewport height
+        width: "100vw",               // 🟢 Full viewport width
+        margin: 0,
+        padding: "2rem",
+        boxSizing: "border-box",     // 🟢 Prevents layout overflow
+        overflowX: "hidden",         // 🟢 Prevent horizontal scroll
+     }}>
         <div
         style={{
           maxWidth: "900px",

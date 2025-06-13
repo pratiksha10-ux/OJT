@@ -1,68 +1,42 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
-
+// App.jsx
 
 import React from "react";
-import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
-import Courses from "./pages/CoursesPage";
-import Contact from "./pages/ContactPage";
-import Admission from "./pages/AdmissionsPage";
-import Header from "./components/Header/Header";  // make sure the path is correct
+import HomePage from "./pages/HomePage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import CoursesPage from "./pages/CoursesPage";
+import AdmissionsPage from "./pages/AdmissionsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ChatbotComponent from "./components/Chatbot/ChatbotComponents";
+import Header from "./components/Headers/Header";
+import Footer from "./components/Footer/Footer";
+import "./styles/pages.css";
 
-const App = () => {
+function App() {
   return (
     <Router>
-      <div>
+      <div className="main-layout">
         <Header />
-        
+
+        <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/admission" element={<Admission />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/admission" element={<AdmissionsPage />} />
+            {/* <Route path="/chat" element={<ChatbotComponent />} /> */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
-           
+
+        </div>
+
+        <ChatbotComponent />
+        <Footer />
       </div>
     </Router>
   );
-};
+}
 
 export default App;
-

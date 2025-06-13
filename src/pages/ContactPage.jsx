@@ -2,7 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const ContactPage = () => {
   return (
-     <div style={{ backgroundColor: "#4fd1c5", minHeight: "100vh", padding: "20px" }}>
+     <div style={{ 
+      backgroundColor: "#52c7ca",
+        minHeight: "100vh",           // 🟢 Full viewport height
+        width: "100vw",               // 🟢 Full viewport width
+        margin: 0,
+        padding: "2rem",
+        boxSizing: "border-box",     // 🟢 Prevents layout overflow
+        overflowX: "hidden",         // 🟢 Prevent horizontal scroll
+     }}>
       <div style={{ backgroundColor: "white", maxWidth: "800px", margin: "0 auto", padding: "20px", borderRadius: "8px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
         <h1 style={{ textAlign: "center", color: "#007bff", fontWeight: "bold" }}>Contact Us</h1>
         <p>We'd love to hear from you! Whether you have questions about admissions, programs, or campus life, our team is here to help.</p>
