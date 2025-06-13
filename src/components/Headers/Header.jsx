@@ -1,28 +1,29 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-function Header() {
+import React from 'react'
+import { Link } from 'react-router-dom'
+import "./Header.css"
+const Header = () => {
     return(
-             <nav style={{ background: '#333', padding: '1rem' }}>
-            <Link to="/" style={{ marginRight: '1rem', color: '#fff' }}>Home</Link>
-            <Link to="/about" style={{ marginRight: '1rem', color: '#fff' }}>About</Link>
-            <Link to="/admission" style={{ marginRight: '1rem', color: '#fff' }}>Admission</Link>
-            <Link to="/courses" style={{ marginRight: '1rem', color: '#fff' }}>Courses</Link>
-            <Link to="/contact" style={{ color: '#fff' }}>Contact</Link>
+        <header className='main-header'>
             
-          <Link to="/admission">
-          <button style={buttonStyle}>Apply Now!</button>
-          </Link>
-       
-        </nav>
-    );
+                <div className='college-name' >
+                <a href="/">Vivekanand College</a>
+                </div>
+                <nav className='first-nav'>
+                <Link to= "/"> Home </Link>
+                <Link to ="/about"> About </Link>
+                <Link to ="/courses"> Courses </Link>
+                <Link to ="/contact"> Contact </Link>
+                <a className="button" href="/admission">Apply Now</a>
+            </nav>
+            <nav className='second-nav'>
+                <button className='close-btn'></button>
+                <a className="nav-item" href="/">Home</a>
+                <a className="nav-item" href="/">About</a>
+                <a className="nav-item" href="/">Courses</a>
+                <a className="nav-item" href="/">Contact</a>
+                <a className='nav-item' href="/AdmissionPage">Apply Now</a>
+            </nav>
+        </header>
+    )
 }
-const buttonStyle = {
-  backgroundColor: '#28a745',
-  color: 'white',
-  padding: '10px 20px',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-  fontSize: '16px'
-};
-export default Header;
+export default Header

@@ -1,8 +1,6 @@
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .logo {
@@ -42,12 +40,12 @@
 }
 
 
-.home-container {
+/* . .home-container{
   position: relative;
   background-image: url('./vck.jpg'); /* path to your image */
-  background-size: cover;
-  background-position: center;
-  height: 400px; /* or any height you want */
+  /* background-size: cover;
+  background-position: center; */
+  /* height: 400px; or any height you want
   color: white;
   display: flex;
   justify-content: center;
@@ -55,8 +53,8 @@
   text-align: center;
   border-radius: 10px;
   margin: 20px;
-  overflow: hidden;
-}
+  overflow: hidden; */
+
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.6); /* dark transparent overlay for text readability */
@@ -89,12 +87,82 @@ p {
 .apply-btn:hover {
   background-color: #218838;
 }
-.main-container {
+.main-layout {
    background-color: #52c7ca;
-  min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+}
+.image{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.image img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 2px 8px #0000001a;
+    transition:transform.3s ease;
+}.main-header {
+    background-color: #007bff;
+   color:rgb(218, 186, 186);
+    padding: 15px 20px;
+    display: flex;
+    align-items: right;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+     z-index: 999;
+}
+.college-name {
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.first-nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav{
+    unicode-bidi: isolate;
+   
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.second-nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 200px;
+    height: 100%;
+    background-color: #eff0ef;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+.button {
+    background-color: #28a745;
+    font-size: 1.4em;
+    padding: 15px 30px;
+}
+.button a {
+    color: green;
+    cursor: pointer;
+    text-decoration: underline;
+}
+a{
+    font-weight: 500;
+    color: #e0eadf;
+    text-decoration: inherit;
 }

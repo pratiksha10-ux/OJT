@@ -1,0 +1,53 @@
+.main-header {
+    background-color: #007bff;
+   color:rgb(218, 186, 186);
+    padding: 15px 20px;
+    display: flex;
+    align-items: right;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+     z-index: 999;
+}
+.college-name {
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+.first-nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav{
+    unicode-bidi: isolate;
+   
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.second-nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 200px;
+    height: 100%;
+    background-color: #eff0ef;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+.button {
+    background-color: #28a745;
+    font-size: 1.4em;
+    padding: 15px 30px;
+}
+.button a {
+    color: green;
+    cursor: pointer;
+    text-decoration: underline;
+}

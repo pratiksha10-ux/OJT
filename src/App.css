@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100%;
+  display:block;
+  float:right;
 }
 
 .logo {
@@ -92,9 +91,9 @@ p {
 .main-container {
    background-color: #52c7ca;
   min-height: 100vh;
-  width: 145;
+  width: 145%;
   margin: 0;
-  padding: 2rem;
+  padding: 1rem;
   box-sizing: border-box;
   overflow-x: hidden;
 }

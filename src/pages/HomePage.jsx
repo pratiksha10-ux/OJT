@@ -71,8 +71,10 @@ const HomePage = () => {
         <li><strong>Strong Placements:</strong> Excellent career opportunities with leading companies.</li>
       </ul>
       <h3>Campus Life and Facilities</h3>
-      <img src="vck.jpg" alt="VCK Campus" />
+      <div className="image">
+      <img src="vck.jpg" alt="VCK Campus "/>
       <img src="logs.jpg" alt="VCK Logo" />
+      </div>
       <p>Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning.</p>
       <button>Explore Courses</button>
     </div>
